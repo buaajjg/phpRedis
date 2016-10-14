@@ -82,7 +82,8 @@
       You can check successfully installed PhpRedis with command bellow
       php -r "if (new Redis() == true){ echo \"OK \r\n\"; }"
 5.download Predis
-      wget https://github.com/nrk/predis/archive/v0.8.zip
+
+      $sudo wget https://github.com/nrk/predis/archive/v0.8.zip
 
       unzip v0.8.zip
 
