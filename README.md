@@ -19,7 +19,7 @@
      check if Redis is working
     $ redis-cli ping
       PONG
-3. 
+3.configering Redis
     Create a directory where to store your Redis config files and your data:
     $ sudo mkdir /etc/redis
     $ sudo mkdir /var/redis
