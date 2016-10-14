@@ -81,3 +81,13 @@
       Note: if you are using Nginx there is no need to restart it, because in most cases it works wit PHP FPM
       You can check successfully installed PhpRedis with command bellow
       php -r "if (new Redis() == true){ echo \"OK \r\n\"; }"
+5.download Predis
+      wget https://github.com/nrk/predis/archive/v0.8.zip
+
+      unzip v0.8.zip
+
+      cd predis-0.8/
+
+      cd lib
+
+      cp -r Predis/ /var/www/info6250.com
