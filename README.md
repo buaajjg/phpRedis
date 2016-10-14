@@ -75,9 +75,6 @@
       Restart PHP-FPM if you have PHP 5
       sudo service php5-fpm restart
 
-      Restart PHP-FPM if you have PHP 7
-      sudo service php7.0-fpm restart
-
       Restart Apache
       sudo service apache2 restart
 
