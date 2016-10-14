@@ -5,8 +5,10 @@
     $ sudo aptitude -y upgrade
     
     $ sudo apt-get install apache2 unzip tcl php5 libapache2-mod-php5 make gcc git php5-dev
+
 2.installation of Redis
-    $ wget http://download.redis.io/redis-stable.tar.gz
+   
+   $ wget http://download.redis.io/redis-stable.tar.gz
     $ tar xvzf redis-stable.tar.gz
     $ cd redis-stable
     $ make
@@ -19,7 +21,9 @@
      check if Redis is working
     $ redis-cli ping
       PONG
+
 3.configering Redis
+    
     Create a directory where to store your Redis config files and your data:
     $ sudo mkdir /etc/redis
     $ sudo mkdir /var/redis
