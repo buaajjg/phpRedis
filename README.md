@@ -11,7 +11,8 @@
     $ cd redis-stable
     $ make
 
-    copy both the Redis server and the command line interface in proper places, either manually using the following commands:
+    copy both the Redis server and the command line interface in proper places, 
+    either manually using the following commands:
    $ sudo cp src/redis-server /usr/local/bin/
    $ sudo cp src/redis-cli /usr/local/bin/
    
@@ -23,10 +24,12 @@
     $ sudo mkdir /etc/redis
     $ sudo mkdir /var/redis
      
-     Copy the init script that you'll find in the Redis distribution under the utils directory into /etc/init.d. We suggest calling it with the name of the port where you are running this instance of Redis.
+     Copy the init script that you'll find in the Redis distribution under the utils directory into /etc/init.d.
+     We suggest calling it with the name of the port where you are running this instance of Redis.
      $ sudo cp utils/redis_init_script /etc/init.d/redis_6379
      
-     Copy the template configuration file you'll find in the root directory of the Redis distribution into /etc/redis/ using the port number as name, for instance:
+     Copy the template configuration file you'll find in the root directory of the Redis distribution into /etc/redis/ 
+     using the port number as name, for instance:
      $ sudo cp redis.conf /etc/redis/6379.conf
      
      Create a directory inside /var/redis that will work as data and working directory for this Redis instance:
