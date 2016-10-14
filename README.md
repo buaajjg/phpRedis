@@ -51,3 +51,36 @@
       $ sudo update-rc.d redis_6379 defaults
       start service
       $ sudo /etc/init.d/redis_6379 start
+      
+4.PhpRedis for PHP 5
+
+      Install required package
+      apt-get install php5-dev
+
+      Download PhpRedis
+      cd /tmp
+      wget https://github.com/phpredis/phpredis/archive/master.zip -O phpredis.zip
+
+      Unpack, compile and install PhpRedis
+      unzip -o /tmp/phpredis.zip && mv /tmp/phpredis-* /tmp/phpredis && cd /tmp/phpredis && phpize && ./configure && make && sudo make install
+
+      Now it is necessary to add compiled extension to php config
+      Add PhpRedis extension to PHP 5.5 and greater
+      sudo touch /etc/php5/mods-available/redis.ini && echo extension=redis.so > /etc/php5/mods-available/redis.ini
+      sudo ln -s /etc/php5/mods-available/redis.ini /etc/php5/apache2/conf.d/
+      sudo ln -s /etc/php5/mods-available/redis.ini /etc/php5/fpm/conf.d/
+      sudo ln -s /etc/php5/mods-available/redis.ini /etc/php5/cli/conf.d/
+      
+      
+      Restart PHP-FPM if you have PHP 5
+      sudo service php5-fpm restart
+
+      Restart PHP-FPM if you have PHP 7
+      sudo service php7.0-fpm restart
+
+      Restart Apache
+      sudo service apache2 restart
+
+      Note: if you are using Nginx there is no need to restart it, because in most cases it works wit PHP FPM
+      You can check successfully installed PhpRedis with command bellow
+      php -r "if (new Redis() == true){ echo \"OK \r\n\"; }"
