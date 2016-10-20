@@ -9,7 +9,7 @@ sudo chown -R $USER:$USER /var/www/mobile/
 
 sudo chmod -R 755 /var/www/
 
-2. set port of server
+2.set port of server
   sudo vi /etc/apache2/ports.conf
   add port under "listen 80":
   listen 81;
