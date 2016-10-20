@@ -63,16 +63,17 @@ sudo vi /etc/apache2/sites-available/000-default.conf
   
 4.set redirect path
   $ sudo vi .htaccess at /var/www/html
-  <IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{HTTP_USER_AGENT} "android|blackberry|googlebot-mobile|iemobile|ipad|iphone|ipod|opera mobile|palmos|webos" [NC]
-  RewriteRule ^$ http://http://104.198.2.206/:82 [L,R=302]
-  </IfModule>
-  <IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{HTTP_USER_AGENT} "!(android|blackberry|googlebot-mobile|iemobile|ipad|iphone|ipod|opera mobile|palmos|webos)" [NC]
-  RewriteRule ^$ http://http://104.198.2.206/:81 [L,R=302]
-  </IfModule>
+  
+      <IfModule mod_rewrite.c>
+      RewriteEngine On
+      RewriteCond %{HTTP_USER_AGENT} "android|blackberry|googlebot-mobile|iemobile|ipad|iphone|ipod|opera mobile|palmos|webos" [NC]
+      RewriteRule ^$ http://http://104.198.2.206/:82 [L,R=302]
+      </IfModule>
+      <IfModule mod_rewrite.c>
+      RewriteEngine On
+      RewriteCond %{HTTP_USER_AGENT} "!(android|blackberry|googlebot-mobile|iemobile|ipad|iphone|ipod|opera mobile|palmos|webos)" [NC]
+      RewriteRule ^$ http://http://104.198.2.206/:81 [L,R=302]
+      </IfModule>
 
   sudo a2ensite 000-default.conf
   
