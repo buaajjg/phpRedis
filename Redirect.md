@@ -71,4 +71,5 @@ sudo vi /etc/apache2/sites-available/000-default.conf
   </IfModule>
 
   sudo a2ensite 000-default.conf
+  
   sudo service apache2 restart
