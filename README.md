@@ -91,4 +91,4 @@
 
       cd lib
 
-      cp -r Predis/ /var/www/info6250.com
+      cp -r Predis/ /var/www/
