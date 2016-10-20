@@ -1,20 +1,24 @@
 1.create new folder in /var/www
-sudo mkdir -p /var/www/desktop/
+    sudo mkdir -p /var/www/desktop/
 
-sudo mkdir -p /var/www/mobile/
+    sudo mkdir -p /var/www/mobile/
 
-sudo chown -R $USER:$USER /var/www/desktop/
+    sudo chown -R $USER:$USER /var/www/desktop/
 
-sudo chown -R $USER:$USER /var/www/mobile/
+    sudo chown -R $USER:$USER /var/www/mobile/
 
-sudo chmod -R 755 /var/www/
+    sudo chmod -R 755 /var/www/
 
 2.set port of server
-  sudo vi /etc/apache2/ports.conf
-  add port under "listen 80":
-  listen 81;
-  listen 82;
-  please open the port of your cloud instance.
+    sudo vi /etc/apache2/ports.conf
+    
+    add port under "listen 80":
+    
+    listen 81;
+    
+    listen 82;
+    
+    please open the port of your cloud instance.
   
 3.config the apache
 sudo vi /etc/apache2/sites-available/000-default.conf
